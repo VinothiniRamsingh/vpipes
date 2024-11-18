@@ -1,0 +1,116 @@
+<section>
+    <div>
+        <h1>Angular - "Pipes"</h1>
+    </div>
+    <hr style="border: 1px dashed; color: rgb(161, 161, 219)">
+</section>
+<section>
+    <div>
+        <h2> Built-in Pipes </h2>
+        <h3> 1) Date </h3>
+        <p> <b>i) day | date : </b>{{day | date}} </p>
+        <p> <b> ii) day | date : 'shortDate' : </b> {{day | date : 'shortDate'}} </p>
+        <p> <b> iii) day | date : 'mediumDate' : </b> {{day | date : 'mediumDate'}} </p>
+        <p> <b> iv) day | date : 'longDate' : </b> {{day | date : 'longDate'}} </p>
+        <p> <b> v) day | date : 'fullDate' : </b> {{day | date : 'fullDate'}} </p>
+        <p> <b> vi) day | date : 'shortTime' : </b> {{day | date : 'shortTime'}} </p>
+        <p> <b> vii) day | date : 'mediumTime' : </b> {{day | date : 'mediumTime'}} </p>
+        <p> <b> viii) day | date : 'longTime' : </b> {{day | date : 'longTime'}} </p>
+        <p> <b> ix) day | date : 'fullTime' : </b> {{day | date : 'fullTime'}} </p>
+        <p> <b> x) day | date : 'short' : </b> {{day | date : 'short'}} </p>
+        <p> <b> day | date : 'M/d/yy, h:mm a' : </b> {{day | date : 'M/d/yy, h:mm a'}} </p>
+        <p> <b> xi) day | date : 'medium' : </b> {{day | date : 'medium'}} </p>
+        <p> <b> day | date : 'MMM d, y, h:mm:ss a' : </b> {{day | date : 'MMM d, y, h:mm:ss a'}} </p>
+        <p> <b> xii) day | date : 'long' : </b> {{day | date : 'long'}} </p>
+        <p> <b> day | date : 'MMMM d, y, h:mm:ss a z' : </b> {{day | date : 'MMMM d, y, h:mm:ss a z'}} </p>
+        <p> <b> xiii) day | date : 'full' : </b> {{day | date : 'full'}} </p>
+        <p> <b> day | date : 'EEEE, MMMM d, y, h:mm:ss a zzzz' : </b> {{day | date : 'EEEE, MMMM d, y, h:mm:ss a zzzz'}} </p>
+    </div>
+    <hr style="border: 1px dashed; color: rgb(161, 161, 219); margin-top: 40px;">
+    <div>
+        <h3> 2) Lowercase </h3>
+        <p> <b> SIRASI NEHI NAHA SRI KARA GRAHAM | lowercase : </b>
+            {{'SIRASI NEHI NAHA SRI KARA GRAHAM' | lowercase}} </p>
+    </div>
+    <hr style="border: 1px dashed; color: rgb(161, 161, 219); margin-top: 40px;">
+    <div>
+        <h3> 3) Uppercase </h3>
+        <p> <b> sirasi nehi naha sri kara graham | uppercase : </b>
+            {{'sirasi nehi naha sri kara graham' | uppercase}} </p>
+    </div>
+    <hr style="border: 1px dashed; color: rgb(161, 161, 219); margin-top: 40px;">
+    <div>
+        <h3> 4) Titlecase (for capitalizing each word) </h3>
+        <p> <b> thasamavira bhochowri, smayamana mukhambuja, peethambaradhara sragwi, sakshanmanmadhamanmadha' | titlecase : </b></p>
+            <p>{{'thasamavira bhochowri, smayamana mukhambuja, peethambaradhara sragwi, sakshanmanmadhamanmadha' | titlecase}} </p>
+    </div>
+    <hr style="border: 1px dashed; color: rgb(161, 161, 219); margin-top: 40px;">
+    <div>
+        <h3> 5) Currency </h3>
+        <p> <b> num : </b>{{num}} </p>
+        <p> <b>i) num | currency : </b>{{num | currency}} </p>
+        <p> <b>ii) num | currency: 'USD' : </b>{{num | currency : 'USD'}} </p>
+        <p> <b>iii) num | currency: 'INR' : </b>{{num | currency : 'INR'}} </p>
+        <p> <b>iv) num | currency: 'EUR' : </b>{{num | currency : 'EUR'}} </p>
+        <p> <b>v) num | currency: 'AUD' : </b>{{num | currency : 'AUD'}} </p>
+    </div>
+    <hr style="border: 1px dashed; color: rgb(161, 161, 219); margin-top: 40px;">
+    <div>
+        <h3> 6) Percent </h3>
+        <p> <b> num1 : </b>{{num1}} </p>
+        <p> <b>i) num1 | percent : </b>{{num1 | percent}} </p>
+        <p> <b>ii) num1 | percent: '1.0-0' : </b>{{num1 | percent:'1.0-0'}} </p>
+        <p> <b>iii) num1 | percent: '1.1-1' : </b>{{num1 | percent:'1.1-1'}} </p>
+        <p> <b>iv) num1 | percent: '1.0-2' : </b>{{num1 | percent:'1.0-2'}} </p>
+    </div>
+    <hr style="border: 1px dashed; color: rgb(161, 161, 219); margin-top: 40px;">
+    <div>
+        <h3> 7) JSON </h3>
+        <p>Ashtasakhi</p>
+        <ul>
+            <li style = "margin-bottom: 20px; margin-left: 20px;"  *ngFor="let friend of ashtasakhi">
+                {{ friend.name }}  -  {{ friend.village }}
+            </li>
+        </ul>
+        <p> <b> ashtasakhi | json : </b></p>
+        <p> {{ashtasakhi | json}} </p>
+    </div>
+    <hr style="border: 1px dashed; color: rgb(161, 161, 219); margin-top: 40px;">
+    <div>
+        <h3> 8) Slice </h3>
+        <p>Ashtasakhis</p>
+        <ul>
+            <li style = "margin-bottom: 20px; margin-left: 20px;"  *ngFor="let friend of ashtasakhis">
+                {{ friend}} 
+            </li>
+        </ul>
+        <p> <b> ashtasakhis | slice : 0:3  </b></p>
+        <p> {{ashtasakhis | slice : 0:3}} </p>
+    </div>
+    <hr style="border: 1px dashed; color: rgb(161, 161, 219); margin-top: 40px;">
+    <div>
+        <h3> 9) Async pipe </h3>
+        <p>Ashtasakhas</p>
+        <ul>
+            <li style = "margin-bottom: 20px; margin-left: 20px;"  *ngFor="let person of (ashtasakha | async)">{{ person }}
+            </li>
+        </ul>
+        <p> <b> ashtasakha | async </b></p>
+        <p> {{ashtasakha | async}} </p>
+    </div>
+    <hr style="border: 1px dashed; color: rgb(161, 161, 219); margin-top: 40px;">
+    <div>
+        <h2> Custom pipe </h2>
+        <p>Ashtasakhis</p>
+        <ul>
+            <li style = "margin-bottom: 20px; margin-left: 20px;"  *ngFor="let friend of ashtasakhis">
+                {{ friend }}
+            </li>
+        </ul>
+        <p> <b> friend | pipe1 </b></p>
+        <p *ngFor="let friend of ashtasakhis"> {{friend | pipe1 }} </p>
+    </div>
+    <hr style="border: 1px dashed; color: rgb(161, 161, 219); margin-top: 40px;">
+</section>
+<br>
+<br>
